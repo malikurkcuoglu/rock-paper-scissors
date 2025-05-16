@@ -82,13 +82,9 @@ let playGame = () => {
     console.log(
       `You win! Your score : ${humanScore} Computer score : ${computerScore}`
     );
-  } else if (humanScore < computerScore) {
-    console.log(
-      `You lose! Your score : ${humanScore} Computer score : ${computerScore}`
-    );
   } else {
     console.log(
-      `Tie! Your score : ${humanScore} Computer score : ${computerScore}`
+      `You lose! Your score : ${humanScore} Computer score : ${computerScore}`
     );
   }
 };
