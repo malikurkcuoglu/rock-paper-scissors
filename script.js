@@ -11,9 +11,6 @@ let computerScore = 0;
 
 buttons.forEach((button) =>
   button.addEventListener("click", (e) => {
-    if (humanScore === 0 && computerScore === 0) {
-      info.textContent = "";
-    }
     humanChoice = e.target.getAttribute("id");
     computerChoice = getComputerChoice();
     playRound(humanChoice, computerChoice);
@@ -78,6 +75,11 @@ let playRound = (humanChoice, computerChoice) => {
     } else {
       info.textContent = "Computer chose scissors too. Tie";
     }
+  }
+  if (humanScoreDiv.textContent === "") {
+    info.classList.add("info-padding");
+    humanScoreDiv.classList.add("score-padding");
+    computerScoreDiv.classList.add("score-padding");
   }
   humanScoreDiv.textContent = `You : ${humanScore}`;
   computerScoreDiv.textContent = `Computer : ${computerScore}`;
